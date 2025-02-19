@@ -1,4 +1,4 @@
-#ARIEL OS DEBUG
+# Ariel OS Debug
 I added .vscode for debbuging code in Linux with gdb-Multiarch and add .svd file which enables to see registers of our uC. 
 I will add some examples to test how to synchronize threads, tasks and to benchmark OS.
 

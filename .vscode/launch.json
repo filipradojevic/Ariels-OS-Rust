@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32F401RE with ArielOS",
+            "request": "launch",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            //change the exe file and root folder if it's needed
+            "executable": "${workspaceFolder}/build/bin/st-nucleo-f401re/cargo/thumbv7em-none-eabi/release/hello-world",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "svdFile": "${workspaceFolder}/stm32f401.svd",
+            "postLaunchCommands": [
+                "continue"
+            ],
+            "gdbPath": "/usr/bin/gdb-multiarch"
+        }
+    ]
+}

@@ -274,6 +274,7 @@ dependencies = [
  "ariel-os-embassy-common",
  "ariel-os-random",
  "ariel-os-rt",
+ "ariel-os-threads",
  "ariel-os-utils",
  "cfg-if",
  "defmt",
@@ -286,6 +287,7 @@ dependencies = [
  "esp-hal",
  "esp-hal-embassy",
  "esp-wifi",
+ "esp-wifi-sys",
  "fugit",
  "once_cell",
  "paste",
@@ -2161,7 +2163,7 @@ dependencies = [
 [[package]]
 name = "esp-alloc"
 version = "0.6.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "cfg-if",
  "critical-section",
@@ -2173,7 +2175,7 @@ dependencies = [
 [[package]]
 name = "esp-build"
 version = "0.2.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "quote",
  "syn 2.0.96",
@@ -2183,7 +2185,7 @@ dependencies = [
 [[package]]
 name = "esp-config"
 version = "0.3.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "document-features",
 ]
@@ -2191,7 +2193,7 @@ dependencies = [
 [[package]]
 name = "esp-hal"
 version = "0.23.1"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "basic-toml",
  "bitfield 0.17.0",
@@ -2232,6 +2234,7 @@ dependencies = [
  "instability",
  "log",
  "nb 1.1.0",
+ "optfield",
  "paste",
  "portable-atomic",
  "rand_core",
@@ -2248,7 +2251,7 @@ dependencies = [
 [[package]]
 name = "esp-hal-embassy"
 version = "0.6.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "critical-section",
  "document-features",
@@ -2270,7 +2273,7 @@ dependencies = [
 [[package]]
 name = "esp-hal-procmacros"
 version = "0.16.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "darling",
  "document-features",
@@ -2286,7 +2289,7 @@ dependencies = [
 [[package]]
 name = "esp-metadata"
 version = "0.5.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "anyhow",
  "basic-toml",
@@ -2297,7 +2300,7 @@ dependencies = [
 [[package]]
 name = "esp-println"
 version = "0.13.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "critical-section",
  "defmt",
@@ -2309,7 +2312,7 @@ dependencies = [
 [[package]]
 name = "esp-riscv-rt"
 version = "0.9.1"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "document-features",
  "riscv",
@@ -2332,7 +2335,7 @@ dependencies = [
 [[package]]
 name = "esp-wifi"
 version = "0.12.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "bt-hci",
  "cfg-if",
@@ -5758,7 +5761,7 @@ checksum = "1e9df38ee2d2c3c5948ea468a8406ff0db0b29ae1ffde1bcf20ef305bcc95c51"
 [[package]]
 name = "xtensa-lx"
 version = "0.10.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "critical-section",
  "document-features",
@@ -5767,7 +5770,7 @@ dependencies = [
 [[package]]
 name = "xtensa-lx-rt"
 version = "0.18.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "anyhow",
  "document-features",
@@ -5784,7 +5787,7 @@ dependencies = [
 [[package]]
 name = "xtensa-lx-rt-proc-macros"
 version = "0.2.2"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -5889,4 +5892,4 @@ dependencies = [
 [[patch.unused]]
 name = "esp-storage"
 version = "0.4.0"
-source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os#6569d3a6c6b78c5d66b639f03c7d7558cb69255c"
+source = "git+https://github.com/ariel-os/esp-hal?branch=v0.23.1%2Bariel-os-threads#aa8d1995fc06eb5e6d04a2022ecf3679b4929e63"
